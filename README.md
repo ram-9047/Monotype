@@ -1,5 +1,5 @@
-# Typeed
-Typeed is a minimalistic react app to test your typing speed! It's under development and hence, a lot of changes will be actively made - including designs, functionality and the multiplayer aspect.
+# Monotyped
+Monotyped is a minimalistic react app to test your typing speed! It's under development and hence, a lot of changes will be actively made - including designs, functionality and the multiplayer aspect.
 
 # Live demo
 [Typeed](https://ish-typeed.web.app)
