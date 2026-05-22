@@ -1,0 +1,169 @@
+:root {
+  /* Default: Midnight Slate */
+  --bg-primary: #090d16;
+  --bg-secondary: #020617;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --accent-primary: #8b5cf6;
+  --accent-secondary: #06b6d4;
+  --correct: #10b981;
+  --wrong: #f43f5e;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --card-border: rgba(255, 255, 255, 0.06);
+  --card-bg: rgba(15, 23, 42, 0.45);
+  --glow-1: rgba(139, 92, 246, 0.12);
+  --glow-2: rgba(6, 182, 212, 0.12);
+  --caret-color: #06b6d4;
+}
+
+[data-theme="cyberpunk"] {
+  --bg-primary: #0d0614;
+  --bg-secondary: #040108;
+  --text-primary: #00ffff;
+  --text-secondary: #ab46b2;
+  --text-muted: #4b1a5a;
+  --accent-primary: #ff007f;
+  --accent-secondary: #00ffff;
+  --correct: #00f0ff;
+  --wrong: #ff0055;
+  --card-border: rgba(255, 0, 127, 0.15);
+  --card-bg: rgba(13, 6, 20, 0.65);
+  --glow-1: rgba(255, 0, 127, 0.18);
+  --glow-2: rgba(0, 255, 255, 0.15);
+  --caret-color: #ff007f;
+}
+
+[data-theme="nord"] {
+  --bg-primary: #2e3440;
+  --bg-secondary: #3b4252;
+  --text-primary: #d8dee9;
+  --text-secondary: #81a1c1;
+  --text-muted: #4c566a;
+  --accent-primary: #88c0d0;
+  --accent-secondary: #81a1c1;
+  --correct: #a3be8c;
+  --wrong: #bf616a;
+  --card-border: rgba(136, 192, 208, 0.15);
+  --card-bg: rgba(46, 52, 64, 0.75);
+  --glow-1: rgba(136, 192, 208, 0.2);
+  --glow-2: rgba(129, 161, 193, 0.15);
+  --caret-color: #88c0d0;
+}
+
+[data-theme="dracula"] {
+  --bg-primary: #212031;
+  --bg-secondary: #1e1e2e;
+  --text-primary: #f8f8f2;
+  --text-secondary: #bd93f9;
+  --text-muted: #6272a4;
+  --accent-primary: #ff79c6;
+  --accent-secondary: #ffb86c;
+  --correct: #50fa7b;
+  --wrong: #ff5555;
+  --card-border: rgba(255, 121, 198, 0.15);
+  --card-bg: rgba(33, 32, 49, 0.75);
+  --glow-1: rgba(255, 121, 198, 0.2);
+  --glow-2: rgba(255, 184, 108, 0.15);
+  --caret-color: #ff79c6;
+}
+
+[data-theme="emerald"] {
+  --bg-primary: #0d1b1e;
+  --bg-secondary: #112c2e;
+  --text-primary: #a7ffeb;
+  --text-secondary: #66ffd9;
+  --text-muted: #2d676e;
+  --accent-primary: #34d399;
+  --accent-secondary: #6ee7b7;
+  --correct: #a7ffeb;
+  --wrong: #f87171;
+  --card-border: rgba(52, 211, 153, 0.15);
+  --card-bg: rgba(13, 27, 30, 0.75);
+  --glow-1: rgba(52, 211, 153, 0.2);
+  --glow-2: rgba(110, 231, 183, 0.15);
+  --caret-color: #34d399;
+}
+
+[data-theme="retro"] {
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a00;
+  --text-primary: #ffb000;
+  --text-secondary: #996a00;
+  --text-muted: #4d3500;
+  --accent-primary: #e5a200;
+  --accent-secondary: #ffb000;
+  --correct: #ffb000;
+  --wrong: #ff3333;
+  --card-border: rgba(255, 176, 0, 0.2);
+  --card-bg: rgba(0, 0, 0, 0.95);
+  --glow-1: rgba(255, 176, 0, 0.08);
+  --glow-2: rgba(229, 162, 0, 0.05);
+  --caret-color: #ffb000;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 50%, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+
+/* Keyframes for UI Enhancements */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float-one {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -60px) scale(1.15); }
+}
+
+@keyframes float-two {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-60px, 40px) scale(1.1); }
+}
+
