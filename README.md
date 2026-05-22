@@ -1,12 +1,15 @@
 # Monotyped
+
 Monotyped is a minimalistic react app to test your typing speed! It's under development and hence, a lot of changes will be actively made - including designs, functionality and the multiplayer aspect.
 
 # Live demo
-[Typeed](https://ish-typeed.web.app)
+
+<!-- [Monotyped](https://ish-typeed.web.app) -->
 
 **Currently it contains over 670 different quotes to test your typing speed against**
 
 # Demo
+
 **Typing everything correctly**
 
 (With stats at the end)
