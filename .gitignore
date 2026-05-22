@@ -25,3 +25,6 @@ yarn-error.log*
 # Activity Log
 activity_log.md
 
+
+# Test Log
+test.md

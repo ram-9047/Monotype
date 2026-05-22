@@ -1,22 +1,57 @@
-# Monotyped
+# Monotyped — Minimal Typing Trainer
 
-Monotyped is a minimalistic react app to test your typing speed! It's under development and hence, a lot of changes will be actively made - including designs, functionality and the multiplayer aspect.
+Monotyped is a minimalist typing trainer built with React and Sass. It provides a focused typing test experience with live metrics, per-character feedback, and customizable audio and themes.
 
-# Live demo
+## Features
 
-<!-- [Monotyped](https://ish-typeed.web.app) -->
+- Typing Test: Presents quotes to type and measures performance.
+- Random Quotes: Ships with ~670+ bundled prompts (no external API).
+- Start-on-first-keystroke: Timer begins on first keypress.
+- Live WPM & Accuracy: Real-time WPM and accuracy while typing.
+- Final Results: Post-run summary: WPM, CPM, time, accuracy, words, characters.
+- Per-character correctness: Visual correct/incorrect marking and caret handling.
+- Word-flow rules: Prevents moving to next word until current word fully typed; handles overwrite and extra characters.
+- Backspace behavior: Backspace deletes last char without counting as a keystroke; tactile feedback included.
+- Themes: Multiple built-in themes (midnight, cyberpunk, nord, dracula, emerald, retro) via `data-theme`.
+- Results panel: Summary cards for quick review of stats.
+- Accessibility: Focusable quote card and keyboard-driven interaction.
+- Refresh quote: Button to load a new random quote.
+- Polished visuals: Glow blobs, theme dots, stat pills, styled letter states.
+- Audio: Web Audio API synthesizer with Cherry Blue, Brown, Red, and Mute profiles.
+- Lazy Audio Init: Audio context initialized lazily to respect autoplay policies.
+- Developer stack: React + Sass, `react-icons`. Dev scripts available in `package.json`.
 
-**Currently it contains over 670 different quotes to test your typing speed against**
+## Quick Start
 
-# Demo
+1. Install
+   - macOS:
+     - npm: `npm install`
+     - yarn: `yarn`
+2. Run (development)
+   - `npm start` or `yarn start`
+3. Build
+   - `npm run build` or `yarn build`
 
-**Typing everything correctly**
+## Project Structure (high level)
 
-(With stats at the end)
+- `src/` — React source
+  - `App.js` — core typing logic and UI
+  - `utils/quotes.json` — bundled quotes
+  - `utils/audioEngine.js` — synthesized key sounds
+- `public/` — static assets
 
-![Correct Flow](https://media.giphy.com/media/XilSPY48TFMfvD0ALC/giphy.gif)
+## Audio Profiles
 
-**Typing incorrectly**
+- Cherry Blue — clicky tactile timbre
+- Brown — softer tactile timbre
+- Red — linear smooth timbre
+- Mute — no sound
 
-Shows red letters, doesn't let you move to the next word also shows extra letters you entered (if any)
-![Incorrect](https://media.giphy.com/media/qcILzGc2C5FU4YKw7G/giphy.gif)
+## Contributing
+
+Report issues or open PRs. Keep changes focused and add tests for behavior changes.
+
+## License
+
+See `LICENSE` (if present).
+
